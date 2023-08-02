@@ -1,0 +1,266 @@
+Script started on 2023-08-02 22:43:37+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="111" LINES="12"]
+[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop[00m$ git push -u origin mainremote add origin https://github.com/Milan-Johnson/CIS-DbManagement.git[A]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop[00m$ [C[C[C[Cbranch -M main[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m "first commit"add .[K[Kcommit -m "first commit"init[Kls[Kcd CISenv/ls[Kcd ../[4Plscd  ../python3 manage.py runserversource /home/ghost/CISenv/bin/activate[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7m/home/ghost/Documents/cisproject/djangop/env/Scripts/a[27m[7mc[27m[7mtivate[27m[A]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop[00m$ [C[C[C[C[C[C[C/home/ghost/Documents/cisproject/djangop/env/Scripts/activate
+[?2004l[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop[00m$ source /home/ghost/Documents/cisproject/djangop/env/Scripts/activate
+[?2004l[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop[00m$ cd cis/
+[?2004l[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ ls
+[?2004l[0m[01;34mcis[0m  db.sqlite3  [01;34mhome[0m  manage.py  [01;34mtemplates[0m
+[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ python [K3 [K]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ python3 [K]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ p
+ython3 [K[A]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ python3 rund[Kserver
+[?2004lpython3: can't open file '/home/ghost/Documents/cisproject/djangop/cis/runserver': [Errno 2] No such file or directory
+[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ python3 runserver[Cm runserver[1P runserver[C runserverm runservera runservern runservera runserverg runservere runserver. runserverp runservery runserver
+[?2004lWatching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+[31m
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): dbManagement.[0m
+[31mRun 'python manage.py migrate' to apply them.[0m
+[31;1mError: That port is already in use.
+[0m[0m[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ python3 manage.py runserver
+[?2004lWatching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+[31m
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): dbManagement.[0m
+[31mRun 'python manage.py migrate' to apply them.[0m
+August 02, 2023 - 17:42:09
+Django version 4.2.2, using settings 'cis.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Internal Server Error: /search/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: dbManagement_faculty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ghost/Documents/cisproject/djangop/cis/dbManagement/views.py", line 38, in search_details
+    print(context)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/query.py", line 374, in __repr__
+    data = list(self[: REPR_OUTPUT_SIZE + 1])
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/usr/local/lib/python3.10/dist-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/usr/local/lib/python3.10/dist-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.10/dist-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/dist-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.10/dist-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: dbManagement_faculty
+[02/Aug/2023 17:42:30] [35;1m"GET /search/ HTTP/1.1" 500 131429[0m
+^C[0m[0m[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ python3 manage.py runserver[10Prunserverls[Kcd cis/source /home/ghost/Documents/cisproject/djangop/env/Scripts/activate[A]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ [36Pgit push -u origin main
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cremote add origin https://github.com/Milan-Johnson/CIS-DbManagement.git[A]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ [C[C[C[Cbranch -M main[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m "first commit"add .[K[Kcommit -m "first commit"init[Kls[Kcd CISenv/ls[Kcd ../[4Plscd  ../python3 manage.py runserversource /home/ghost/CISenv/bin/activate[11Ppython3 manage.py runserver[3P manage.py migrateakemigrations[7Pigrateakemigrations
+[?2004lCommand 'python' not found, did you mean:
+  command 'python3' from deb python3
+  command 'python' from deb python-is-python3
+[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ python manage.py makemigrations[C[1@3
+[?2004lNo changes detected
+[0m[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ python3 manage.py makemigrations[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@3[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kpython3 manage.py makemigrations[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4P3 manage.py runserver[10Prunserver
+[?2004lpython3: can't open file '/home/ghost/Documents/cisproject/djangop/cis/runserver': [Errno 2] No such file or directory
+[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ python3 runservermanage.py makemigrations[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4P3 manage.py runserver
+[?2004lWatching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+[31m
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): dbManagement.[0m
+[31mRun 'python manage.py migrate' to apply them.[0m
+August 02, 2023 - 17:45:44
+Django version 4.2.2, using settings 'cis.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+/home/ghost/Documents/cisproject/djangop/cis/home/models.py changed, reloading.
+[0mWatching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/base.py", line 485, in check
+    all_issues = checks.run_checks(
+  File "/usr/local/lib/python3.10/dist-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 494, in check
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 715, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 708, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ghost/Documents/cisproject/djangop/cis/cis/urls.py", line 7, in <module>
+    path('',include('home.urls')),
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ghost/Documents/cisproject/djangop/cis/home/urls.py", line 3, in <module>
+    from home import views
+  File "/home/ghost/Documents/cisproject/djangop/cis/home/views.py", line 7, in <module>
+    from home.models import Student,Department,Faculty
+ImportError: cannot import name 'Student' from 'home.models' (/home/ghost/Documents/cisproject/djangop/cis/home/models.py)
+/home/ghost/Documents/cisproject/djangop/cis/home/views.py changed, reloading.
+[0mWatching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/management/base.py", line 485, in check
+    all_issues = checks.run_checks(
+  File "/usr/local/lib/python3.10/dist-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python3.10/dist-packages/django/core/checks/urls.py", line 24, in check_resolver
+    return check_method()
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 494, in check
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 715, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.10/dist-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/resolvers.py", line 708, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ghost/Documents/cisproject/djangop/cis/cis/urls.py", line 7, in <module>
+    path('',include('home.urls')),
+  File "/usr/local/lib/python3.10/dist-packages/django/urls/conf.py", line 38, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ghost/Documents/cisproject/djangop/cis/home/urls.py", line 12, in <module>
+    path('getResponse',views.getResponse,name='getResponse'),
+AttributeError: module 'home.views' has no attribute 'getResponse'. Did you mean: 'HttpResponse'?
+/home/ghost/Documents/cisproject/djangop/cis/home/urls.py changed, reloading.
+[0mWatching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+[31m
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): dbManagement.[0m
+[31mRun 'python manage.py migrate' to apply them.[0m
+August 02, 2023 - 17:48:18
+Django version 4.2.2, using settings 'cis.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+[02/Aug/2023 17:48:32] [32m"GET /admin/ HTTP/1.1" 302 0[0m
+[02/Aug/2023 17:48:32] [m"GET /admin/login/?next=/admin/ HTTP/1.1" 200 3701[0m
+[02/Aug/2023 17:49:09] [m"POST /admin/login/?next=/admin/ HTTP/1.1" 200 3862[0m
+^C[0m[0m[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ python3 manage.py runserver[10Prunservermanage.py makemigrations
+[?2004l[36;1mMigrations for 'dbManagement':[0m
+  [1mdbManagement/migrations/0001_initial.py[0m
+    - Create model Faculty
+    - Create model Student
+[0m[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ python3 manage.py makemigrations[1Pmigrations[1Pmigrations[1Pmigrations[1Pigrations[C[C[C[C[C[C[C[C[C[1Ps[1Ps[1Ps[1Ps[C[Kte
+[?2004l[36;1mOperations to perform:[0m
+[1m  Apply all migrations: [0madmin, auth, contenttypes, dbManagement, sessions
+[36;1mRunning migrations:[0m
+  Applying contenttypes.0001_initial...[32;1m OK[0m
+  Applying auth.0001_initial...[32;1m OK[0m
+  Applying admin.0001_initial...[32;1m OK[0m
+  Applying admin.0002_logentry_remove_auto_add...[32;1m OK[0m
+  Applying admin.0003_logentry_add_action_flag_choices...[32;1m OK[0m
+  Applying contenttypes.0002_remove_content_type_name...[32;1m OK[0m
+  Applying auth.0002_alter_permission_name_max_length...[32;1m OK[0m
+  Applying auth.0003_alter_user_email_max_length...[32;1m OK[0m
+  Applying auth.0004_alter_user_username_opts...[32;1m OK[0m
+  Applying auth.0005_alter_user_last_login_null...[32;1m OK[0m
+  Applying auth.0006_require_contenttypes_0002...[32;1m OK[0m
+  Applying auth.0007_alter_validators_add_error_messages...[32;1m OK[0m
+  Applying auth.0008_alter_user_username_max_length...[32;1m OK[0m
+  Applying auth.0009_alter_user_last_name_max_length...[32;1m OK[0m
+  Applying auth.0010_alter_group_name_max_length...[32;1m OK[0m
+  Applying auth.0011_update_proxy_permissions...[32;1m OK[0m
+  Applying auth.0012_alter_user_first_name_max_length...[32;1m OK[0m
+  Applying dbManagement.0001_initial...[32;1m OK[0m
+  Applying sessions.0001_initial...[32;1m OK[0m
+[0m[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ python3 manage.py migrateakemigrations[5Prunserver[10Prunservermanage.py makemigrations[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4P3 manage.py runserver[10Prunserverls[Kcd cis/source /home/ghost/Documents/cisproject/djangop/env/Scripts/activate[A]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ [36Pgit push -u origin main
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cremote add origin https://github.com/Milan-Johnson/CIS-DbManagement.git[A]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ [C[C[C[Cbranch -M main[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m "first commit"add .[K[Kcommit -m "first commit"init[Kls[Kcd CISenv/ls[Kcd ../[4Plscd  ../python3 manage.py runserversource /home/ghost/CISenv/bin/activate[11Ppython3 manage.py runserver[3P manage.py migrateakemigrations[7Pigrateakemigrations[4P3 manage.py runserver createsuperuser[10P manage.py migrateakemigrations[4P3 manage.py runserver createsuperuser[10P manage.py migrate3 manage.py  createsuperuser
+[?2004lUsername (leave blank to use 'ghost'): go host
+Email address: m go host@email.com
+Password: 
+Password (again): 
+[31;1mThis password is too short. It must contain at least 8 characters.
+This password is too common.
+[0mBypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+[0m[?2004h]0;ghost@gost-pop-os: ~/Documents/cisproject/djangop/cis[01;32mghost@gost-pop-os[00m:[01;34m~/Documents/cisproject/djangop/cis[00m$ python3 manage.py  createsuperuser
