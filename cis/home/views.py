@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from home.ai import genrateAnswer
 # from .models import *
 
 
@@ -53,9 +54,37 @@ def loginpage(request):
         
     return render(request,'login.html')
 
+# @login_required(login_url='login')
+# def chatpage(request):
+#     print("123")
+#     if request.method == "GET":
+#         print("1")
+#         print(request.GET.get('userMessage'))
+#     elif request.method == "POST":
+#         print("2")
+
+#     userMessage=request.GET.get('userMessage')
+#     print(userMessage)
+#     return render(request,'chat.html')
+
+# def specific(request):
+#     print("134")
+#     return HttpResponse("list1")
+
+# def getResponse(request):
+#     print("145")
+#     userMessage=request.POST.get('userMessage')
+#     print(userMessage)
+    # return HttpResponse(userMessage)
+
 @login_required(login_url='login')
-def chatpage(request): 
-    return render(request,'chat.html')
+def chatpage(request):
+    # qs = Student.objects.all()
+    userMessageTxt = request.GET.get('userMessage')
+    print(userMessageTxt)
+
+    answerTxt=genrateAnswer(userMessageTxt)
+    return render(request, "search1.html",{"question" : userMessageTxt, "answer" : answerTxt})
 
 
 def LogoutPage(request):
