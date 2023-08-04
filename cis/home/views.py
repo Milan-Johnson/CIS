@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from home.ai import genrateAnswer
+from aiCore.aiReply import genrateAnswer
 # from .models import *
 
 
@@ -82,7 +82,7 @@ def chatpage(request):
     # qs = Student.objects.all()
     userMessageTxt = request.GET.get('userMessage')
     print(userMessageTxt)
-
+    # return render(request, "search1.html")
     answerTxt=genrateAnswer(userMessageTxt)
     return render(request, "search1.html",{"question" : userMessageTxt, "answer" : answerTxt})
 

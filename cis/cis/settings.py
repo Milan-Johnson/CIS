@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-px(b$27v&*2w!tg0(i$u5(54q=qxk*1h53r%7^4e(&%24y%__f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['colab.research.google.com',
+                 '127.0.0.1']
 
 
 # Application definition
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'dbManagement',
+    'aiCore',
 ]
 
 MIDDLEWARE = [
